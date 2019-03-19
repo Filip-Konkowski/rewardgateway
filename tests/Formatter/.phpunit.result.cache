@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":293:{a:2:{s:7:"defects";a:1:{s:69:"App\Tests\Formatter\AvatarFormatCheckerTest::testCheckForBase64Format";i:4;}s:5:"times";a:2:{s:69:"App\Tests\Formatter\AvatarFormatCheckerTest::testCheckForBase64Format";d:0.001;s:67:"App\Tests\Formatter\AvatarFormatCheckerTest::testCheckForHttpFormat";d:0.001;}}}

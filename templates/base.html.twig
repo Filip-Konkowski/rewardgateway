@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="flash-{{ label }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
+
+        {% block body %}{% endblock %}
+        <table>
+            <thead>
+            <tr>
+                <th class="col-md-1">Id</th>
+                <th class="col-md-1">company</th>
+                <th class="col-md-6">bio</th>
+                <th class="col-md-2">name</th>
+                <th class="col-md-1">title</th>
+                <th class="col-md-1">avatar</th>
+            </tr>
+            </thead>
+            <tbody>
+        {% for employee in employees  %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.company }}</td>
+            <td>{{ employee.bio }}</td>
+            <td>{{ employee.name }}</td>
+            <td>{{ employee.title }}</td>
+            <td>
+                <img src="{{ employee.avatar }}">
+            </td>
+        </tr>
+        {% endfor %}
+        </table>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
